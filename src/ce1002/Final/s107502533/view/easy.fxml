@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="_field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ce1002.Final.s107502533.controller.easycontroller">
+   <children>
+      <ImageView fitHeight="900.0" fitWidth="1600.0" layoutX="-21.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../controller/resource/map.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="_generate" fitHeight="140.0" fitWidth="100.0" layoutX="150.0" layoutY="650.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../controller/resource/soldiers/clubman/walk2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="_cave" fitHeight="536.0" fitWidth="873.0" layoutX="-322.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../controller/resource/cave.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="_castle" fitHeight="562.0" fitWidth="905.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../controller/resource/castle.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="_Ecave" fitHeight="536.0" fitWidth="873.0" layoutX="1000.0" layoutY="400.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../controller/resource/cave.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="_Ecastle" fitHeight="562.0" fitWidth="905.0" layoutX="684.0" layoutY="400.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../controller/resource/castle.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="_factory" fitHeight="539.0" fitWidth="873.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../controller/resource/factory.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="_Efactory" fitHeight="539.0" fitWidth="873.0" layoutX="716.0" layoutY="400.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../controller/resource/factory.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="981.0" prefHeight="160.0" prefWidth="608.0" style="-fx-background-color: gray;">
+         <children>
+            <ImageView fitHeight="172.0" fitWidth="608.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../controller/resource/pane.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="_soldier" fitHeight="103.0" fitWidth="100.0" layoutX="87.0" layoutY="38.0" onMouseClicked="#onSoldierPressed" onMouseEntered="#onSoldierEntered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../controller/resource/soldier.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="_levelup" fitHeight="100.0" fitWidth="108.0" layoutX="438.0" layoutY="40.0" onMouseClicked="#onLevelupPressed" onMouseEntered="#onLevelupEntered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../controller/resource/levelup.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="_club" fitHeight="100.0" fitWidth="106.0" layoutX="22.0" layoutY="38.0" onMouseClicked="#onClubPressed" onMouseEntered="#onClubEntered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../controller/resource/soldiers/clubman/photo.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="_slingshot" fitHeight="100.0" fitWidth="106.0" layoutX="140.0" layoutY="38.0" onMouseClicked="#onSlingPressed" onMouseEntered="#onSlingEntered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../controller/resource/soldiers/slingshotman/photo.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="_dino" fitHeight="100.0" fitWidth="106.0" layoutX="266.0" layoutY="37.0" onMouseClicked="#onDinoPressed" onMouseEntered="#onDinoEntered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../controller/resource/soldiers/dinorider/photo.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="_back" fitHeight="115.0" fitWidth="100.0" layoutX="438.0" layoutY="37.0" onMouseClicked="#onBackPressed" onMouseEntered="#onBackEntered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../controller/resource/back.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="_sword" fitHeight="103.0" fitWidth="100.0" layoutX="25.0" layoutY="30.0" onMouseClicked="#onSwordPressed" onMouseEntered="#onSwordEntered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../controller/resource/soldiers/swordman/photo.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="_arch" fitHeight="103.0" fitWidth="100.0" layoutX="159.0" layoutY="30.0" onMouseClicked="#onArchPressed" onMouseEntered="#onArchEntered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../controller/resource/soldiers/archman/photo.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="_knight" fitHeight="103.0" fitWidth="100.0" layoutX="293.0" layoutY="30.0" onMouseClicked="#onKnightPressed" onMouseEntered="#onKnightEntered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../controller/resource/soldiers/knight/photo.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="_knife" fitHeight="103.0" fitWidth="100.0" layoutX="37.0" layoutY="30.0" onMouseClicked="#onKnifePressed" onMouseEntered="#onKnifeEntered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../controller/resource/soldiers/knifeman/photo.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="_ak" fitHeight="103.0" fitWidth="100.0" layoutX="159.0" layoutY="30.0" onMouseClicked="#onAkPressed" onMouseEntered="#onAkEntered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../controller/resource/soldiers/akman/photo.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="_tank" fitHeight="103.0" fitWidth="100.0" layoutX="284.0" layoutY="30.0" onMouseClicked="#onTankPressed" onMouseEntered="#onTankEntered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../controller/resource/soldiers/tank/photo.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="_ability2" fitHeight="100.0" fitWidth="104.0" layoutX="266.0" layoutY="37.0" onMouseClicked="#onAbility2Pressed" onMouseEntered="#onAbility2Entered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../controller/resource/ability2.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="_ability3" fitHeight="100.0" fitWidth="104.0" layoutX="266.0" layoutY="37.0" onMouseClicked="#onAbility3Pressed" onMouseEntered="#onAbility3Entered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../controller/resource/ability3.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="_ability1" fitHeight="100.0" fitWidth="104.0" layoutX="266.0" layoutY="38.0" onMouseClicked="#onAbility1Pressed" onMouseEntered="#onAbility1Entered" onMouseExited="#onMouseExit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../controller/resource/ability1.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <Label fx:id="_cool" alignment="CENTER" layoutX="290.0" layoutY="63.0" prefHeight="25.0" prefWidth="54.0" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Pane fx:id="_wait" layoutX="266.0" layoutY="38.0" opacity="0.6" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: blue;" visible="false" />
+         </children>
+      </Pane>
+      <GridPane layoutX="25.0" layoutY="215.0" prefHeight="328.0" prefWidth="42.0" style="-fx-grid-lines-visible: true;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <GridPane layoutX="1490.0" layoutY="215.0" prefHeight="328.0" prefWidth="42.0" style="-fx-grid-lines-visible: true;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <ImageView fx:id="_bloodbar" fitHeight="350.0" fitWidth="42.0" layoutX="25.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../controller/resource/blood.png" />
+         </image>
+         <viewport>
+            <Rectangle2D width="42.0" />
+         </viewport>
+      </ImageView>
+      <ImageView fx:id="_Ebloodbar" fitHeight="339.0" fitWidth="42.0" layoutX="1490.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../controller/resource/blood.png" />
+         </image>
+         <viewport>
+            <Rectangle2D width="42.0" />
+         </viewport>
+      </ImageView>
+      <Label fx:id="_gold" layoutX="9.0" layoutY="6.0" prefHeight="43.0" prefWidth="140.0" text="Gold  175" textFill="#d2df3e">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="_exp" layoutX="9.0" layoutY="31.0" prefHeight="37.0" prefWidth="140.0" text="EXP  0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="_hp" layoutX="19.0" layoutY="175.0" prefHeight="37.0" prefWidth="81.0" text="200" textFill="#f52e2e">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="_Ehp" layoutX="1464.0" layoutY="175.0" prefHeight="37.0" prefWidth="81.0" text="200" textFill="#f52e2e">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="149.0" layoutY="15.0" prefHeight="20.0" prefWidth="600.0" style="-fx-grid-lines-visible: true;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <GridPane layoutX="149.0" layoutY="45.0" prefHeight="20.0" prefWidth="600.0" style="-fx-grid-lines-visible: true;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane layoutX="149.0" layoutY="75.0" prefHeight="20.0" prefWidth="600.0" style="-fx-grid-lines-visible: true;">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <ImageView fx:id="_load1" fitHeight="20.0" fitWidth="600.0" layoutX="150.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" scaleX="0.0">
+         <image>
+            <Image url="@../controller/resource/load.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="_load2" fitHeight="20.0" fitWidth="600.0" layoutX="150.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" scaleX="0.0">
+         <image>
+            <Image url="@../controller/resource/load.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="_load3" fitHeight="20.0" fitWidth="600.0" layoutX="150.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" scaleX="0.0">
+         <image>
+            <Image url="@../controller/resource/load.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="_infoname" alignment="CENTER_RIGHT" layoutX="758.0" layoutY="6.0" prefHeight="43.0" prefWidth="223.0" textFill="#2807c4">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="_infocost" alignment="CENTER_RIGHT" layoutX="754.0" layoutY="43.0" prefHeight="43.0" prefWidth="223.0" textFill="#2807c4">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

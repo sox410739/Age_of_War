@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ce1002.Final.s107502533.controller.losecontroller">
+   <children>
+      <ImageView fitHeight="900.0" fitWidth="1600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../controller/resource/lose.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="_stream2" fitHeight="62.0" fitWidth="495.0" layoutX="482.0" layoutY="698.0" pickOnBounds="true">
+         <image>
+            <Image url="@../controller/resource/stream.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="_exit" fitHeight="245.0" fitWidth="439.0" layoutX="510.0" layoutY="517.0" onMouseClicked="#onExitClicked" onMouseEntered="#onExitEntered" onMouseExited="#onExitExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../controller/resource/exit.png" />
+         </image>
+         <effect>
+            <InnerShadow color="#313030" />
+         </effect>
+      </ImageView>
+   </children>
+</Pane>
